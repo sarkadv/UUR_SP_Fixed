@@ -43,7 +43,18 @@ public class FileLoader {
 					String[] ids = line.split(" ");
 					
 					for(int x = 0; x < mapWidth; x++) {
-						tiles[x][y] = Integer.parseInt(ids[x]);
+						int value = Integer.parseInt(ids[x]);
+						if(darkMode) {
+							if(!(value % 10 == 1)) {
+								value = value - (value % 10) + 1;
+							}
+						}
+						else {
+							if(!(value % 10 == 0)) {
+								value = value - (value % 10);
+							}
+						}
+						tiles[x][y] = value;
 					}
 				}
 			}
