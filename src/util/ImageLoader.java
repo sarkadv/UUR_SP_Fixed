@@ -150,6 +150,7 @@ public class ImageLoader {
 	
 	public static Image HINT_UP;
 	public static Image HINT_DOWN;
+	public static Image HINT_MAPCONTROLS;
 	
 	private ImageLoader() {};
 	
@@ -265,20 +266,21 @@ public class ImageLoader {
 		HINT_EXPORT = crop(spritesheetHint, 0, 2, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		HINT_HELP = crop(spritesheetHint, 1, 3, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		HINT_LOAD = crop(spritesheetHint, 2, 3, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
-		HINT_MODE = crop(spritesheetHint, 3, 0, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
-		HINT_NEW = crop(spritesheetHint, 3, 1, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
-		HINT_SAVE = crop(spritesheetHint, 3, 3, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
-		HINT_SETTINGS = crop(spritesheetHint, 0, 4, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
+		HINT_MODE = crop(spritesheetHint, 3, 1, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
+		HINT_NEW = crop(spritesheetHint, 3, 2, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
+		HINT_SAVE = crop(spritesheetHint, 0, 4, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
+		HINT_SETTINGS = crop(spritesheetHint, 1, 4, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		
-		HINT_PICK = crop(spritesheetHint, 3, 2, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
+		HINT_PICK = crop(spritesheetHint, 3, 3, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		HINT_ERASE = crop(spritesheetHint, 2, 1, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		HINT_EYEDROPPER = crop(spritesheetHint, 1, 2, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		HINT_CHOOSEAERA = crop(spritesheetHint, 0, 1, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		HINT_FILLAREA = crop(spritesheetHint, 2, 2, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		HINT_FILLBORDERS = crop(spritesheetHint, 0, 3, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		
-		HINT_UP = crop(spritesheetHint, 1, 4, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
+		HINT_UP = crop(spritesheetHint, 2, 4, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 		HINT_DOWN = crop(spritesheetHint, 1, 1, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
+		HINT_MAPCONTROLS = crop(spritesheetHint, 3, 0, HINT_PICTURE_WIDTH, HINT_PICTURE_HEIGHT);
 	}
 	
 	private static Image crop(Image src, int col, int row, int imageWidth, int imageHeight) throws Exception {

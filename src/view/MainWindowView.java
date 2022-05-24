@@ -217,7 +217,7 @@ public class MainWindowView extends Application {
 	
 	private Node createLeftContent() {
 		BorderPane leftContent = new BorderPane();
-		leftContent.setPadding(new Insets(10, 50, 10, 10));
+		leftContent.setPadding(new Insets(10, 40, 10, 10));
 		
 		leftContent.setTop(createTopButtons());
 		leftContent.setCenter(mapController.getView());
@@ -314,6 +314,7 @@ public class MainWindowView extends Application {
 	private Node createTopButtons() {
 		HBox buttonsPane = new HBox(5);
 		buttonsPane.setPadding(new Insets(10, 5, 10, 5));
+		buttonsPane.setAlignment(Pos.TOP_LEFT);
 		
 		newFile = new ImageButton(50, 50, "Nová Mapa", ImageLoader.NEW_LIGHT);
 		newFile.setOnAction(e -> {

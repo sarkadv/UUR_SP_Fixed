@@ -113,6 +113,8 @@ public class HelpWindow extends Stage {
 		TreeItem<HelpItem> export = new TreeItem<HelpItem>(new HelpItem("Exportovat jako obrázek", ImageLoader.HINT_EXPORT, ImageLoader.EXPORT_LIGHT, "Ctr + E", "Nástroj Exportovat jako obrázek exportuje obrázek mapy a uloží jej ve formátu PNG."));
 	
 		TreeItem<HelpItem> mapItem = new TreeItem<HelpItem>(new HelpItem("Práce s mapou", ImageLoader.HINT_DEFAULT));
+		TreeItem<HelpItem> mapControls = new TreeItem<HelpItem>(new HelpItem("Posouvání mapy", ImageLoader.HINT_MAPCONTROLS, ImageLoader.TRIANGLE_RIGHT, "W, S, A, D", "Indikátory ve tvaru šipky ukazují, jestli se ještě v daném směru\nnacházejí dlaždice. Mapu lze do těchto směrů posouvat."));
+		TreeItem<HelpItem> mapZoom = new TreeItem<HelpItem>(new HelpItem("Zoomování mapy", ImageLoader.HINT_DEFAULT, null, "", "Pomocí scrollování myší lze mapu přibližovat / oddalovat."));
 		TreeItem<HelpItem> back = new TreeItem<HelpItem>(new HelpItem("Zpět", ImageLoader.HINT_BACK, ImageLoader.BACK_LIGHT, "Ctr + Z", "Nástroj Zpět vrátí mapu do stavu před poslední provedenou akcí."));
 		TreeItem<HelpItem> mode = new TreeItem<HelpItem>(new HelpItem("Změna barevného režimu", ImageLoader.HINT_MODE, ImageLoader.MODE_LIGHT, "Ctr + M", "Nástroj Změna barevného režimu poskytuje možnosti přepínat ze světlého režimu na tmavý a naopak."));
 		TreeItem<HelpItem> pick = new TreeItem<HelpItem>(new HelpItem("Vybrat", ImageLoader.HINT_PICK, ImageLoader.PICK_LIGHT, "Escape", "Nástroj Vybrat resetuje volbu nástroje i dlaždice."));
@@ -134,7 +136,7 @@ public class HelpWindow extends Stage {
 		root.getChildren().addAll(fileItem, mapItem, menuItem, otherItem);
 		
 		fileItem.getChildren().addAll(newFile, saveFile, loadFile, export);
-		mapItem.getChildren().addAll(back, mode, pick, erase, eyedropper, chooseArea, fillArea, fillBorders);
+		mapItem.getChildren().addAll(back, mapControls, mapZoom, mode, pick, erase, eyedropper, chooseArea, fillArea, fillBorders);
 		menuItem.getChildren().addAll(up, down);
 		otherItem.getChildren().addAll(settings, help, about);
 	}

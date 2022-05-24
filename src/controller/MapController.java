@@ -60,7 +60,7 @@ public class MapController {
 	}
 	
 	public void changeTileSize(double stageWidth, double stageHeight) {
-		double newTileSize = Math.min(stageWidth, stageHeight) - 175;
+		double newTileSize = Math.min(stageWidth, stageHeight) - 225;
 		newTileSize = newTileSize / model.getTilesVisibleLine();
 		
 		model.setTileSize(newTileSize);
