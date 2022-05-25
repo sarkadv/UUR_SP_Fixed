@@ -46,12 +46,18 @@ public class FileLoader {
 						int value = Integer.parseInt(ids[x]);
 						if(darkMode) {
 							if(!(value % 10 == 1)) {
-								value = value - (value % 10) + 1;
+								throw new Exception();
+							}
+							if(value < (activePlanet*80) + 1 || value > ((activePlanet + 1)*80 - 10) + 1) {
+								throw new Exception();
 							}
 						}
 						else {
 							if(!(value % 10 == 0)) {
-								value = value - (value % 10);
+								throw new Exception();
+							}
+							if(value < (activePlanet*80)|| value > ((activePlanet + 1)*80 - 10)) {
+								throw new Exception();
 							}
 						}
 						tiles[x][y] = value;
