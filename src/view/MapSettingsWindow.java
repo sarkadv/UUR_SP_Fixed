@@ -193,7 +193,7 @@ public class MapSettingsWindow extends Stage {
 		
 		HBox modeChangeControls = new HBox(5);
 		
-		Label modeLabel = new Label("Denní / Noční režim ovlivňuje vzhled okna");
+		Label modeLabel = new Label("Denní / Noční režim mapy ovlivňuje barvu okna");
 		
 		modeCheckBox = new CheckBox();
 		modeCheckBox.selectedProperty().setValue(mainWindowController.isWindowModeChanges());
@@ -205,12 +205,12 @@ public class MapSettingsWindow extends Stage {
 		
 		modeRBGroup = new ToggleGroup();
 
-		lightRB = new RadioButton("Světlý mód");
+		lightRB = new RadioButton("Vždy světlá barva okna");
 		lightRB.setToggleGroup(modeRBGroup);
 		lightRB.setSelected(!mainWindowController.getDarkMode());
 		lightRB.setDisable(mainWindowController.isWindowModeChanges());
 
-		darkRB = new RadioButton("Tmavý mód");
+		darkRB = new RadioButton("Vždy tmavá barva okna");
 		darkRB.setToggleGroup(modeRBGroup);
 		darkRB.setSelected(mainWindowController.getDarkMode());
 		darkRB.setDisable(mainWindowController.isWindowModeChanges());

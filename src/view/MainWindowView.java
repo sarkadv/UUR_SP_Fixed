@@ -313,7 +313,7 @@ public class MainWindowView extends Application {
 	
 	private Node createTopButtons() {
 		HBox buttonsPane = new HBox(5);
-		buttonsPane.setPadding(new Insets(10, 5, 10, 5));
+		buttonsPane.setPadding(new Insets(10, 5, 20, 5));
 		buttonsPane.setAlignment(Pos.TOP_LEFT);
 		
 		newFile = new ImageButton(50, 50, "Nová Mapa", ImageLoader.NEW_LIGHT);

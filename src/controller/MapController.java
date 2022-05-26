@@ -228,6 +228,18 @@ public class MapController {
 			int tileCoordinateEndX = model.getFirstTileVisibleX() + getTileCoordinate(dragCoordinates.getEndX());
 			int tileCoordinateEndY = model.getFirstTileVisibleY() + getTileCoordinate(dragCoordinates.getEndY());
 			
+			
+			if(tileCoordinateEndX > model.getFirstTileVisibleX() + model.getTilesVisibleLine() - 1) {
+				tileCoordinateEndX = tileCoordinateEndX + (model.getFirstTileVisibleX() + model.getTilesVisibleLine() - 1 - tileCoordinateEndX);
+			}
+			
+			if(tileCoordinateEndY > model.getFirstTileVisibleY() + model.getTilesVisibleLine() - 1) {
+				tileCoordinateEndY = tileCoordinateEndY + (model.getFirstTileVisibleY() + model.getTilesVisibleLine() - 1 - tileCoordinateEndY);
+			}
+			
+			System.out.println(tileCoordinateEndX);
+			System.out.println(tileCoordinateEndY);
+			
 			for(int x = 0; x < chosenTiles.length; x++) {
 				for(int y = 0; y < chosenTiles[x].length; y++) {
 					if((x >= tileCoordinateStartX && x <= tileCoordinateEndX)||(x >= tileCoordinateEndX && x <= tileCoordinateStartX)) {
@@ -260,6 +272,14 @@ public class MapController {
 			
 			int tileCoordinateEndX = model.getFirstTileVisibleX() + getTileCoordinate(dragCoordinates.getEndX());
 			int tileCoordinateEndY = model.getFirstTileVisibleY() + getTileCoordinate(dragCoordinates.getEndY());
+			
+			if(tileCoordinateEndX > model.getFirstTileVisibleX() + model.getTilesVisibleLine() - 1) {
+				tileCoordinateEndX = tileCoordinateEndX + (model.getFirstTileVisibleX() + model.getTilesVisibleLine() - 1 - tileCoordinateEndX);
+			}
+			
+			if(tileCoordinateEndY > model.getFirstTileVisibleY() + model.getTilesVisibleLine() - 1) {
+				tileCoordinateEndY = tileCoordinateEndY + (model.getFirstTileVisibleY() + model.getTilesVisibleLine() - 1 - tileCoordinateEndY);
+			}
 			
 			for(int x = 0; x < chosenBorders.length; x++) {
 				for(int y = 0; y < chosenBorders[x].length; y++) {
